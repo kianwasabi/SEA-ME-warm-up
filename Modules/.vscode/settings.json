@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.embeddedhtml": "html",
-        "iosfwd": "cpp",
-        "ostream": "cpp",
-        "__locale": "cpp",
-        "iostream": "cpp"
-    }
-}
