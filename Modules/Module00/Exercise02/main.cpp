@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
     string str = argv[2];
     //Don't forget that a string input can be separated by spaces/tablogs.
     for(int i = 3; i<argc; i++){
-        //str.append(" ");
+        str.append(" ");
         str.append(argv[i]);
     }
     //Call functions for command "up" oder "down" and print to terminal

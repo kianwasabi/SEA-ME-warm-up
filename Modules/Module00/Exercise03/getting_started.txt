@@ -1,0 +1,52 @@
+------ Compile Code ------ 
+The g++ commands I provided are used to compile and link the C++ source files into an executable program.
+First, navigate to your project folder. 
+$ cd Module00/Exercise03
+Second, compile the phonebook.cpp source file and generates an object file (phonebook.o). 
+The -c flag tells g++ to compile the source file without linking. The -o flag specifies the output file name.
+$ g++ -c src/phonebook.cpp -o src/phonebook.o
+Third, compile the main.cpp source file and generates another object file (main.o).
+$ g++ -c main.cpp -o main.o
+Then, compiled the object files (phonebook.o and main.o) together into an executable program called phonebook. 
+$ g++ src/phonebook.o main.o -o phonebook
+After running these commands, you will have an executable file called phonebook, which you can run by executing ./phonebook in the terminal.
+$ ./phonebook
+
+The g++ command automatically performs the linking step when object files are provided as input. 
+The -o flag specifies the output file name for the executable.
+By compiling and linking the source files separately, you can improve compilation times when you make changes to only one of the files. 
+Only the modified file needs to be recompiled, and then all the object files can be linked together again to create the updated executable.
+
+------ Terminal Commands ------ 
+$ COMMAND {stringstream}
+$ ADD {firstname} {lastname} {phonenumer} {nickname}
+$ SEARCH {index/all} {value/null}
+$ REMOVE {index(phonenumer)} {value/value}
+$ BOOKMARK {index} {value}
+$ EXIT
+
+------- Test functionalty according to requirments ------ 
+IN:                                 OUT (Expected):            OUT (Test):              Comment: 
+1) Adding new contacts.
+$ ADD Kian Warias 1234 Kian         Contact successfully added.
+$ ADD Kian Warias 1234 Kian         Another contact with same phonenumber already exists. 
+$ ADD Nika Warias 1234 Nika         Another contact with same phonenumber already exists.
+$ ADD Nika Warias 5678 Nika         Contact successfully added.
+2) Look through contact list.
+$ SEARCH all                        Lists all contacts. 
+$ SEARCH index 1                    Shows first contact in vector.
+$ SEARCH index 2                    Shows second contact in vector. 
+$ SEARCH index 3                    There is no contact with this index. 
+3) Toggle bookmark on contacts. 
+$ BOOKMARK index 1                  
+$ SEARCH index 1                    First contact is bookmarked. 
+$ BOOKMARK index 2                  
+$ SEARCH index 2                    Second contact is bookmarked. 
+$ BOOKMARK index 1                  
+$ SEARCH index 1                    First contact is not bookmarked. 
+4) Remove contacts. 
+$ REMOVE index 1                    First contact removed.                  
+$ REMOVE phone number 5678          Second contact removed. 
+$ SEARCH all                        
+5) Exit Application. 
+$ EXIT                              Program has been ended.   Program has been ended.   passed.                    
