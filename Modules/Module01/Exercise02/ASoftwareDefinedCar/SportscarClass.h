@@ -24,7 +24,7 @@ public:
     void settopspeed(int topspeed);
     // Functions
     void drive();
-    // Pure Virtual Function (Run-time polymorphism (Method overriding))
+    // Implementation of the pure virtual function (Run-time polymorphism (Method overriding)
     void honk() const override;
     // For further explanation, see .cpp file
 };

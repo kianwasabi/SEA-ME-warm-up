@@ -34,6 +34,8 @@ SportsCar::~SportsCar() {
 }
 
 // Getter & Setter Functions
+/*Encuplation -
+Internal state of the object is not directly accessible from outside the class.*/
 short SportsCar::gettopspeed() const{
     return *topspeed_;
 }

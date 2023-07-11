@@ -67,11 +67,11 @@ CMakeLists.txt.user*
 # Binaries
 # --------
 
-# folders
+# folders 
 _Archiv/
-Modules/Module01/Exercise02/Qt5/build-ASoftwareDefinedCar-Desktop_Qt_5_15_2_clang_64bit-Debug/ 
-Modules/Module01/Exercise01/Qt5/build-SoftwareDefinedCar-Desktop_Qt_5_15_2_clang_64bit-Debug
-
+Modules/Module01/Exercise01/build-Sportscar-Desktop_Qt_5_15_2_clang_64bit-Debug/
+Modules/Module01/Exercise02/build-ASoftwareDefinedCar-Desktop_Qt_5_15_2_clang_64bit-Debug/
+# builds & ? 
 *.ts
 *.user
 *.out
