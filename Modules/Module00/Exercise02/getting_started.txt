@@ -1,0 +1,8 @@
+First, cd to directory: 
+$cd (..) Module00/Exercise02
+Second, compile&build executable files:
+$g++ -std=c++11 main.cpp -o convert
+Finally, use the following cmd to convert string:
+$ ./convert {up/down} {string}
+$ ./convert up ibx HDSiu nx
+ 

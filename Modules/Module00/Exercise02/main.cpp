@@ -1,4 +1,35 @@
-#include "include/convert.h"
+#include <iostream>
+#include <iostream>
+#include <string>
+#include <cstdlib>
+
+using namespace std;
+
+/* convertUppercase converts all lowercase characters in the input string to uppercase 
+and returns the modified string while leaving non-alphabetic characters unchanged.
+*/
+string convertUppercase(const string& str) {
+    string ret = str;
+    //Loop that iterates through each character c in the ret string using a range-based for loop.
+    for (char& c : ret) {
+        if (isalpha(c) && islower(c)) {
+            c = toupper(c); //If the c is both an alphabet letter and lowercase, the toupper function is called.
+        }
+    }
+    return ret;
+}
+
+/*Does the same as convertUppercase just to Lowercase :) */
+string convertLowercase(const string& str) {
+    string ret = str;
+    // loop through char array and use tolower function for each char in char array
+    for (char& c : ret) {
+        if (isalpha(c) && isupper(c)) {
+            c = tolower(c);
+        }
+    }
+    return ret;
+}
 
 int main(int argc, char* argv[]) {
     //Print to terminal that argv does not include all needed information (/path/command/string)

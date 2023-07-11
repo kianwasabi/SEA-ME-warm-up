@@ -19,7 +19,7 @@ public:
     string nickname;
     bool bookmarked;
     Contact(const string& first, const string& last, const string& phone, const string& nick)
-        : firstName(first), lastName(last), phoneNumber(phone), nickname(nick), bookmarked(false) {} //
+        : firstName(first), lastName(last), phoneNumber(phone), nickname(nick), bookmarked(false) {} 
 };
 
 class Phonebook {

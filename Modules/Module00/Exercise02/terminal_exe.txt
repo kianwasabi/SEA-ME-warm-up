@@ -1,9 +1,0 @@
-Use C++ 11 with g++ 
-Template: g++ -std=c++11 your_file.cpp -o your_program
-cd to directory: 
-$cd /Users/kiandavidwarias/Documents/GitHub/SEA-ME/SEA-ME-warm-up/Modules/Module00/Exercise02
-Run in Terminal for executable files / Compile files: 
-$g++ -std=c++11 main.cpp src/convert.cpp 
-$g++ -std=c++11 main.cpp src/convert.cpp -o main
-Then run command in terminal: 
-$./main up hii jjjj  
