@@ -26,27 +26,28 @@ $ BOOKMARK {index} {value}
 $ EXIT
 
 ------- Test functionalty according to requirments ------ 
-IN:                                 OUT (Expected):            OUT (Test):              Comment: 
+IN (Test CMD):                      OUT (Expected):                                        Comment: 
 1) Adding new contacts.
-$ ADD Kian Warias 1234 Kian         Contact successfully added.
-$ ADD Kian Warias 1234 Kian         Another contact with same phonenumber already exists. 
-$ ADD Nika Warias 1234 Nika         Another contact with same phonenumber already exists.
-$ ADD Nika Warias 5678 Nika         Contact successfully added.
-2) Look through contact list.
-$ SEARCH all                        Lists all contacts. 
-$ SEARCH index 1                    Shows first contact in vector.
-$ SEARCH index 2                    Shows second contact in vector. 
-$ SEARCH index 3                    There is no contact with this index. 
+$ ADD Kian Warias 1234 Kian         Contact successfully added.                             passed.
+$ ADD Kian Warias 1234 Kian         Another contact with same phonenumber already exists.   passed.
+$ ADD Nika Warias 1234 Nika         Another contact with same phonenumber already exists.   passed.
+$ ADD Nika Warias 5678 Nika         Contact successfully added.                             passed.
+2) Look through contact list.       
+$ SEARCH all                        Lists all contacts.                                     passed.
+$ SEARCH index 1                    Shows first contact in vector.                          passed.
+$ SEARCH index 2                    Shows second contact in vector.                         passed.
+$ SEARCH index 3                    There is no contact with this index.                    passed.
 3) Toggle bookmark on contacts. 
-$ BOOKMARK index 1                  
-$ SEARCH index 1                    First contact is bookmarked. 
-$ BOOKMARK index 2                  
-$ SEARCH index 2                    Second contact is bookmarked. 
-$ BOOKMARK index 1                  
-$ SEARCH index 1                    First contact is not bookmarked. 
+$ BOOKMARK index 1                  Bookmark first contact.                                 passed.
+$ SEARCH index 1                    First contact is bookmarked.                            passed.
+$ BOOKMARK index 2                  Bookmark second contact.                                passed.
+$ SEARCH index 2                    Second contact is bookmarked.                           passed.
+$ BOOKMARK index 1                  Un-Bookmark first contact.                              passed.
+$ SEARCH index 1                    First contact is not bookmarked.                        passed.
 4) Remove contacts. 
-$ REMOVE index 1                    First contact removed.                  
-$ REMOVE phone number 5678          Second contact removed. 
-$ SEARCH all                        
+$ REMOVE index 1                    First contact removed.                                  passed. 
+$ REMOVE phone number 5678          Second contact removed.                                 passed.
+$ SEARCH all                        Lists all contacts.                                     passed.
 5) Exit Application. 
-$ EXIT                              Program has been ended.   Program has been ended.   passed.                    
+$ EXIT                              Stops Program.   Program has been ended.                passed.                    
+---- To see OUT (Actual): Run Program & execute Test CMDs. 

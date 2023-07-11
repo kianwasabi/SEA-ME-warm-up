@@ -4,6 +4,7 @@
 
 Phonebook::Phonebook(){};
 
+/*Adds new Contact to Phonebook*/
 void Phonebook::addContact(const string& firstName, const string& lastName, const string& phoneNumber, const string& nickname) {
         if (phoneIndexMap.find(phoneNumber) != phoneIndexMap.end()) {
             cout << "There is another contact in your phonebook with the same number." << endl;
@@ -15,7 +16,7 @@ void Phonebook::addContact(const string& firstName, const string& lastName, cons
 
         cout << "Added to phonebook: " << contacts.size() << ", " << firstName << " " << lastName << ", " << phoneNumber << ", " << nickname << endl;
     }
-
+/*Lists all Contacts or searchs for specific Contact depending on selected mode (all or index)*/
 void Phonebook::searchContacts(const string& mode, const string& criteria) {
         if (mode == "all") {
             cout << "Index, First Name, Last Name, Phone Number, Nickname, Bookmarked" << endl;
@@ -39,7 +40,7 @@ void Phonebook::searchContacts(const string& mode, const string& criteria) {
             cout << "Invalid search mode." << endl;
         }
     }
-
+/*Removes Contact depending on identifier (index or phone#)*/
 void Phonebook::removeContact(const string& identifier, const string& value) {
         if (identifier == "index") {
             istringstream iss(value);
@@ -47,20 +48,20 @@ void Phonebook::removeContact(const string& identifier, const string& value) {
             if (iss >> index && index >= 1 && index <= contacts.size()) {
                 index -= 1; // Convert to 0-based index
                 string name = contacts[index].firstName + " " + contacts[index].lastName;
-                contacts.erase(contacts.begin() + index);
-                updatePhoneIndexMap();
+                contacts.erase(contacts.begin() + index); // Delete Selected Contact (index) from Vector 
+                updatePhoneIndexMap(); // Update indexing in Phonebook
                 cout << "Contact with the index " << index + 1 << " (" << name << ") has been removed." << endl;
             }
             else {
-                cout << "Invalid index." << endl;
+                cout << "No contact found with the given index." << endl;
             }
         }
         else if (identifier == "phone number") {
             if (phoneIndexMap.find(value) != phoneIndexMap.end()) {
                 size_t index = phoneIndexMap[value];
                 string name = contacts[index - 1].firstName + " " + contacts[index - 1].lastName;
-                contacts.erase(contacts.begin() + index - 1);
-                updatePhoneIndexMap();
+                contacts.erase(contacts.begin() + index - 1); // Delete Selected Contact (index) from Vector 
+                updatePhoneIndexMap(); // Update indexing in Phonebook
                 cout << "Contact with the phone number " << value << " (" << name << ") has been removed." << endl;
             }
             else {
@@ -72,13 +73,14 @@ void Phonebook::removeContact(const string& identifier, const string& value) {
         }
     }
 
+/* Bookmark of a Contact is toggled depending on the passed identifier (phone# or index)*/
 void Phonebook::bookmarkContact(const string& identifier, const string& value) {
         if (identifier == "index") {
             istringstream iss(value);
             int index;
             if (iss >> index && index >= 1 && index <= contacts.size()) {
                 index -= 1; // Convert to 0-based index
-                contacts[index].bookmarked = !contacts[index].bookmarked;
+                contacts[index].bookmarked = !contacts[index].bookmarked; // toggle bookmark
                 string name = contacts[index].firstName + " " + contacts[index].lastName;
                 cout << "Contact with the index " << index + 1 << " (" << name << ") has been " << (contacts[index].bookmarked ? "bookmarked." : "unbookmarked.") << endl;
             }
@@ -91,6 +93,7 @@ void Phonebook::bookmarkContact(const string& identifier, const string& value) {
         }
     }
 
+/* Sets new index in Phonebook if a Contact is removed/stored.*/
 void Phonebook::updatePhoneIndexMap() {
         phoneIndexMap.clear();
         for (size_t i = 0; i < contacts.size(); ++i) {

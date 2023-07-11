@@ -1,6 +1,7 @@
 #include "include/phonebook.h"
 
 int main() {
+    // Create Phonebook Object
     Phonebook phonebook;
 
     string command;
@@ -15,11 +16,12 @@ int main() {
         cout << "CMD3: BOOKMARK {index} {value}" << endl;
         cout << "CMD4: EXIT" << endl;
         cout << "Enter command: ";
+        // Read StringStream from Terminal
         getline(cin, command);
         istringstream iss(command);
         string operation;
         iss >> operation;
-
+        // Select Operation
         if (operation == "ADD") {
             string firstName, lastName, phoneNumber, nickname;
             iss >> firstName >> lastName >> phoneNumber >> nickname;
