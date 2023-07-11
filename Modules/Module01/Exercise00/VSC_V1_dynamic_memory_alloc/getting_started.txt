@@ -1,0 +1,6 @@
+------ Compile Code ------ 
+$ cd Module01/Exercise01
+$ g++ -c src/CarClass.cpp -o src/CarClass.o
+$ g++ -c main.cpp -o main.o
+$ g++ src/CarClass.o main.o -o CarClass
+$ ./CarClass
