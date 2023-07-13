@@ -69,8 +69,15 @@ CMakeLists.txt.user*
 
 # folders 
 _Archiv/
+Qt5/
+
+# build folders 
 Modules/Module01/Exercise01/build-Sportscar-Desktop_Qt_5_15_2_clang_64bit-Debug/
 Modules/Module01/Exercise02/build-ASoftwareDefinedCar-Desktop_Qt_5_15_2_clang_64bit-Debug/
+Modules/Module02/Exercise01/build-CarConfigurator-Desktop_Qt_5_15_2_clang_64bit-Debug/
+Modules/Module02/Exercise01/build-CarConfigurator-Desktop_Qt_5_15_2_clang_64bit-Debug/
+Modules/Module03/Excerice00/build-GraphicalPhonebook-Desktop_Qt_5_15_2_clang_64bit-Debug/
+
 # builds & ? 
 *.ts
 *.user

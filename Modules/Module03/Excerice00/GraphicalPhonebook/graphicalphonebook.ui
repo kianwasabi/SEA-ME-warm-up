@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphicalPhonebook</class>
+ <widget class="QDialog" name="GraphicalPhonebook">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>447</width>
+    <height>508</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GraphicalPhonebook</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>431</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="genealGridLayout">
+    <item row="1" column="0">
+     <widget class="QPushButton" name="searchPushButton">
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="removePushButton">
+        <property name="text">
+         <string>Remove</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bookmarkPushButton">
+        <property name="text">
+         <string>Bookmark</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1">
+     <widget class="QTableView" name="ContactsTableView"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QTextEdit" name="searchTextEdit"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="addPushButton">
+      <property name="text">
+       <string>Add</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <layout class="QGridLayout" name="contactGridLayout">
+      <item row="2" column="0">
+       <widget class="QLabel" name="lastnameabel">
+        <property name="text">
+         <string>Last Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="emailaddressLabel">
+        <property name="text">
+         <string>E-Mail Address</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="phonenumberLabel">
+        <property name="text">
+         <string>Phone Number</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="firstnameLabel">
+        <property name="text">
+         <string>First Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="firstnameLineEdit">
+        <property name="placeholderText">
+         <string>Max</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lastnameLineEdit">
+        <property name="placeholderText">
+         <string>Mustermann</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="phonenumberLineEdit">
+        <property name="placeholderText">
+         <string>+49 176 12345678</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="emailaddressLineEdit">
+        <property name="placeholderText">
+         <string>max@mustermann.eu</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>addPushButtonSlot()</slot>
+  <slot>slot2()</slot>
+ </slots>
+</ui>

@@ -10,15 +10,15 @@ private:
     shared_ptr<float> bedwidth_;
     shared_ptr<float> bedlength_;
 public:
-    //
+    // Default Constructor
     TruckCar();
-    //
+    // Parameterized Constructor
     TruckCar(const string& make, short year, const string& model, float bedlength, float bedwidth);
-    //
+    // Deep Copy Constructor
     TruckCar(const TruckCar& other);
-    //
+    // Assigment Operator
     TruckCar& operator=(const TruckCar& other);
-    //
+    // Destructor
     ~TruckCar();
     // getter & setter function
     float getbedwidth() const;
