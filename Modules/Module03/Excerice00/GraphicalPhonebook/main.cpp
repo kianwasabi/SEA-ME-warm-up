@@ -17,7 +17,9 @@ int main(int argc, char *argv[])
             break;
         }
     }
+    // Create Phonebook GUI
     GraphicalPhonebook w;
+    // Run
     w.show();
     return a.exec();
 }

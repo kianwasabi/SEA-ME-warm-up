@@ -72,16 +72,29 @@ _Archiv/
 Qt5/
 
 # build folders 
+# M00
+
+# M01
 Modules/Module01/Exercise01/build-Sportscar-Desktop_Qt_5_15_2_clang_64bit-Debug/
+build-Sportscar-Desktop_Qt_5_15_2_clang_64bit-Debug/
 Modules/Module01/Exercise02/build-ASoftwareDefinedCar-Desktop_Qt_5_15_2_clang_64bit-Debug/
+build-ASoftwareDefinedCar-Desktop_Qt_5_15_2_clang_64bit-Debug/
+# M02
 Modules/Module02/Exercise01/build-CarConfigurator-Desktop_Qt_5_15_2_clang_64bit-Debug/
-Modules/Module02/Exercise01/build-CarConfigurator-Desktop_Qt_5_15_2_clang_64bit-Debug/
+build-CarConfigurator-Desktop_Qt_5_15_2_clang_64bit-Debug/
+# M03
 Modules/Module03/Excerice00/build-GraphicalPhonebook-Desktop_Qt_5_15_2_clang_64bit-Debug/
+build-GraphicalPhonebook-Desktop_Qt_5_15_2_clang_64bit-Debug/
 
 # builds & ? 
 *.ts
 *.user
 *.out
+*.log
+*.marks
+*.check_cache
+*.cmake
+*.prev
 
 # OS generated files
 .DS_Store

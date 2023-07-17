@@ -6,74 +6,223 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>447</width>
-    <height>508</height>
+    <width>600</width>
+    <height>321</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>GraphicalPhonebook</string>
   </property>
-  <widget class="QWidget" name="gridLayoutWidget_2">
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>431</width>
-     <height>491</height>
+     <x>340</x>
+     <y>10</y>
+     <width>251</width>
+     <height>151</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="genealGridLayout">
-    <item row="1" column="0">
-     <widget class="QPushButton" name="searchPushButton">
-      <property name="text">
-       <string>Search</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QPushButton" name="removePushButton">
-        <property name="text">
-         <string>Remove</string>
+   <layout class="QHBoxLayout" name="FeaturesLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="selectContactLineEdit">
+        <property name="placeholderText">
+         <string>Search by ID</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="bookmarkPushButton">
+      <item row="3" column="0">
+       <widget class="QPushButton" name="editPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
-         <string>Bookmark</string>
+         <string>Edit 📝</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="removePushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Remove➖</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="bookmarkPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Bookmark 🤩</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
         </property>
        </widget>
       </item>
      </layout>
     </item>
-    <item row="2" column="1">
-     <widget class="QTableView" name="ContactsTableView"/>
-    </item>
-    <item row="1" column="1">
-     <widget class="QTextEdit" name="searchTextEdit"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="addPushButton">
+    <item>
+     <widget class="QPushButton" name="exportPushButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="text">
-       <string>Add</string>
+       <string>Save 💾</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
       </property>
      </widget>
     </item>
-    <item row="0" column="1">
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="contactsTableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>585</width>
+     <height>149</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>18</number>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>80</number>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>16</number>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>27</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>First Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Last Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Phone Number</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>E-Mail</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Nickname</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>🤩</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>318</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="AddContactLayout">
+    <item>
      <layout class="QGridLayout" name="contactGridLayout">
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="phonenumberLineEdit">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>+49 176 12345678</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="firstnameLineEdit">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>Max</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="nicknameLineEdit">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>maxi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lastnameLineEdit">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>Mustermann</string>
+        </property>
+       </widget>
+      </item>
       <item row="2" column="0">
        <widget class="QLabel" name="lastnameabel">
         <property name="text">
          <string>Last Name</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="emailaddressLabel">
-        <property name="text">
-         <string>E-Mail Address</string>
         </property>
        </widget>
       </item>
@@ -84,6 +233,13 @@
         </property>
        </widget>
       </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="emailaddressLabel">
+        <property name="text">
+         <string>E-Mail Address</string>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="0">
        <widget class="QLabel" name="firstnameLabel">
         <property name="text">
@@ -91,31 +247,45 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="firstnameLineEdit">
-        <property name="placeholderText">
-         <string>Max</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLineEdit" name="lastnameLineEdit">
-        <property name="placeholderText">
-         <string>Mustermann</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QLineEdit" name="phonenumberLineEdit">
-        <property name="placeholderText">
-         <string>+49 176 12345678</string>
-        </property>
-       </widget>
-      </item>
       <item row="4" column="1">
        <widget class="QLineEdit" name="emailaddressLineEdit">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="placeholderText">
          <string>max@mustermann.eu</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="nicknameLabel">
+        <property name="text">
+         <string>Nick Name</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="addPushButton">
+        <property name="text">
+         <string>Add➕</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
         </property>
        </widget>
       </item>
