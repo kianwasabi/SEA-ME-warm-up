@@ -85,6 +85,9 @@ build-CarConfigurator-Desktop_Qt_5_15_2_clang_64bit-Debug/
 # M03
 Modules/Module03/Excerice00/build-GraphicalPhonebook-Desktop_Qt_5_15_2_clang_64bit-Debug/
 build-GraphicalPhonebook-Desktop_Qt_5_15_2_clang_64bit-Debug/
+# M04
+Modules/Module04/build-Multithreading-Desktop_Qt_5_15_2_clang_64bit-Debug/
+build-Multithreading-Desktop_Qt_5_15_2_clang_64bit-Debug/
 
 # builds & ? 
 *.ts
