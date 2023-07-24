@@ -2,7 +2,7 @@
 
 A memory leak and a dangling pointer are both issues related to memory management in a program. 
 
-### 1. Memory Leak:
+### Memory Leak:
 Memory leaks occur when dynamically allocated memory is not properly deallocated or freed when it is no longer needed. 
 This means that memory that was allocated during the program's execution remains allocated.
 Memory leaks can happen when memory is dynamically allocated using functions like `new` or `malloc` and the corresponding deallocation (using `delete` or `free`) is either forgotten. 
@@ -11,7 +11,7 @@ If memory leaks accumulate over time, they can cause a program to consume excess
 Here's an example of a memory leak in C++. 
 In this example, memory is allocated using `new int`, but there is no corresponding `delete` statement to free the allocated memory. 
 As a result, each time `foo()` is called, memory is leaked because it is never deallocated.
-    <code>
+```cpp
     void foo() {
         // Memory allocation
         int* ptr = new int;  
@@ -21,10 +21,10 @@ As a result, each time `foo()` is called, memory is leaked because it is never d
         foo();
         return 0;
     }
-    </code>
+```
 <aside> 💡 Ensure that memory allocated dynamically is properly deallocated when it is no longer needed. </aside>
 
-### 2. Dangling Pointer:
+### Dangling Pointer:
 A dangling pointer is a pointer that points to a memory location that has been freed or deallocated. 
 It occurs when a pointer is accessed after the object it was pointing to has been deleted or has gone out of scope.
 Accessing a dangling pointer can lead to undefined behavior, as the memory it points to may have been reallocated for other purposes or may no longer be accessible.
@@ -33,7 +33,7 @@ Here's an example of a dangling pointer in C++.
 In this example, the `createInt()` function returns a pointer to a local variable `x`. 
 However, once the function returns, the local variable goes out of scope, and the pointer `ptr` becomes a dangling pointer. 
 Accessing `danglingPtr` in `main()` will result in undefined behavior since the memory it points to is no longer valid.
-    <code>
+```cpp
         int* createInt() {
             int x = 5;
             int* ptr = &x;  // ptr points to a local variable on the stack
@@ -45,7 +45,7 @@ Accessing `danglingPtr` in `main()` will result in undefined behavior since the 
             // Accessing it can lead to undefined behavior
             return 0;
         }
-    </code>
+```
 
 <aside> 💡 To avoid dangling pointers, ensure that pointers are not used to access memory locations that have been deallocated or gone out of scope. It is a good practice to set pointers to `nullptr` after deallocating the memory they point to, to avoid accidentally accessing them. </aside>
 
