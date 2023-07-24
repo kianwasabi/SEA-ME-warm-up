@@ -1,7 +1,4 @@
-# Module 02
-## Exercise 00 : Smart Pointer
-
-💡 What is memory leak? And what is a dangling pointer?
+❓ What is memory leak? And what is a dangling pointer? What is a smart pointer?
 
 A memory leak and a dangling pointer are both issues related to memory management in a program. 
 
